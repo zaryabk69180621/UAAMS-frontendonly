@@ -225,58 +225,7 @@ export const RegisterPage = () => {
                     error={fieldErrors.phone}
                     required
                   />
-                  <AuthField
-                    icon={<Building2 className="h-4 w-4" />}
-                    label="Location"
-                    value={formData.location}
-                    onChange={(value) => updateField("location", value)}
-                    placeholder="City, Province"
-                    error={fieldErrors.location}
-                    required
-                  />
-                </div>
-
-                <SectionLabel>University Profile</SectionLabel>
-                <div className="grid gap-4 md:grid-cols-3">
-                  <AuthField
-                    label="Website"
-                    type="url"
-                    value={formData.website}
-                    onChange={(value) => updateField("website", value)}
-                    placeholder="https://www.university.edu"
-                  />
-                  <AuthField
-                    label="Established Year"
-                    type="number"
-                    value={formData.establishedYear}
-                    onChange={(value) => updateField("establishedYear", value)}
-                    placeholder="e.g., 1990"
-                    error={fieldErrors.establishedYear}
-                    required
-                  />
-                  <AuthField
-                    label="Students"
-                    type="number"
-                    value={formData.studentCount}
-                    onChange={(value) => updateField("studentCount", value)}
-                    placeholder="e.g., 5000"
-                    error={fieldErrors.studentCount}
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-1 block text-xs font-semibold uppercase text-emerald-700">
-                    Programs Offered
-                  </label>
-                  <textarea
-                    rows={3}
-                    value={formData.programsOffered}
-                    onChange={(event) => updateField("programsOffered", event.target.value)}
-                    placeholder="List programs offered"
-                    className={`${authInputClass} min-h-24 resize-y`}
-                    required
-                  />
+                 
                 </div>
               </>
             ) : null}
